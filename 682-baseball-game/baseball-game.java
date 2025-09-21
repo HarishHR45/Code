@@ -1,6 +1,7 @@
 class Solution {
     public int calPoints(String[] operations) {
         Stack<Integer> stack = new Stack<>();
+
         for(String str: operations){
             if(str.equals("C")){
                 stack.pop();
@@ -17,10 +18,13 @@ class Solution {
                 stack.push(Integer.parseInt(str));
             }
         }
+
         int result = 0;
+
         while(!stack.empty()){
             result += stack.pop();
         }
+
         return result;
     }
 }
