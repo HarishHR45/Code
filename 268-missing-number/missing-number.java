@@ -1,11 +1,11 @@
 class Solution {
-    public int missingNumber(int[] nums) { 
+    public int missingNumber(int[] nums) {
        int n = nums.length;
        int[] count = new int[n+1];
        for(int i=0;i<nums.length;i++){
         count[nums[i]] = 1;
        }
-       for(int i=0;i<=count.length;i++){
+       for(int i=0;i<count.length;i++){
         if(count[i] == 0){
             return i;
         }
